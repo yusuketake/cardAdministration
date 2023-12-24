@@ -14,7 +14,13 @@ mybatis:
 # mapper-locations: classpath*:/mapper/postgres/*.xml
   mapper-locations: classpath*:/com.benkyo.repository/*.xml
 
+#プロファイル
 #spring.profiles.active: develop
 
-# コンソールに出力されるログのレベルを変更(Unknown Propertyって出るけど機能してる)  
-logging.level.org.springframework.web: DEBUG
+#ログ設定
+logging: 
+  config: classpath:logback-spring.xml
+  level: 
+    root: INFO
+    org.springframework.web: DEBUG # コンソールに出力されるログのレベルを変更(Unknown Propertyって出るけど機能してる)
+    appLogger: DEBUG
