@@ -2,11 +2,12 @@ package com.benkyo.repository;
 
 import java.util.List;
 
-import org.mybatis.spring.annotation.MapperScan;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.benkyo.domain.user.model.MUser;
 
-@MapperScan
+@Mapper
 public interface UserMapper {
-	public List<MUser> selectAll(MUser user);
+
+	public List<MUser> selectAll();
 }

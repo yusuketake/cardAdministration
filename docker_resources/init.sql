@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS members(
+CREATE TABLE IF NOT EXISTS accounts(
     id SERIAL,
     "name" text,
     age int,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS members(
 );
 
 insert into
-    members (id, name, age)
+    accounts (id, name, age)
 VALUES
     (9999, '竹内', 24),
     (8888, 'まっきー', 24),

@@ -21,16 +21,20 @@ public class SearchAccountController {
 
 	@Autowired
 	private ModelMapper modelMapper;
+	
+//	いらない。なぜなら、UserServiceImplで下の処理をやってるから。
+//	@Autowired
+//	private UserMapper userMapper;
 
 	@GetMapping("/selectAll")
-	public void getSelectAll(Model model) {
-
-		MUser user = null;
+	public String getSelectAll(Model model) {
 
 		// アカウント一覧取得
-		List<MUser> userList = userService.selectAll(user);
+		List<MUser> userList = userService.selectAll();
 
 		System.out.println(userList);
+		String str = userList.toString();
+		return str;
 
 	}
 }
