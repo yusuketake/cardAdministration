@@ -9,11 +9,13 @@
 .*.md.html
 .DS_Store
 .attach_pid*
+.classpath
 .factorypath
 .gradle
 .metadata
 .project
 .recommenders
+.settings
 .springBeans
 .vscode
 /code
