@@ -102,6 +102,21 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- logback-springに必要なライブラリ -->		
+		<dependency>
+	        <groupId>org.slf4j</groupId>
+	        <artifactId>slf4j-api</artifactId>        
+	    </dependency>
+	    <dependency>
+	        <groupId>ch.qos.logback</groupId>
+	        <artifactId>logback-classic</artifactId>
+	    </dependency>
+	    
+	    <dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		</dependency>
+	
 	</dependencies>
 
 	<build>
@@ -117,11 +132,11 @@
 				-->
 				<!-- default lifecycle, jar packaging: see
 				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-				<!-- <plugin>
+				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
-				-->
+				
 				<!--
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -158,5 +173,17 @@
 				-->
 			</plugins>
 		</pluginManagement>
+
+		 <!-- <resources>            
+      		<resource>
+            	<directory>src/main/resources/</directory>
+				<excludes>
+					<exclude>**/.svn/*</exclude>
+            	</excludes>
+            	<includes>
+                	<include>com/benkyo/*.xml</include>
+            	</includes>
+       		</resource>
+    	</resources> -->
 	</build>
 </project>
