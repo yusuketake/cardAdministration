@@ -12,7 +12,7 @@ spring:
 #MyBatis
 mybatis:
 # mapper-locations: classpath*:/mapper/postgres/*.xml
-  mapper-locations: classpath*:/resources/com/benkyo/*.xml
+  mapper-locations: classpath:/com/benkyo/repository/*.xml
 
 #プロファイル
 #spring.profiles.active: develop
