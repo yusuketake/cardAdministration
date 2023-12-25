@@ -11,8 +11,7 @@ spring:
     
 #MyBatis
 mybatis:
-# mapper-locations: classpath*:/mapper/postgres/*.xml
-  mapper-locations: classpath:/com/benkyo/repository/*.xml
+  mapper-locations: classpath:com/benkyo/repository/UserMapper.xml
 
 #プロファイル
 #spring.profiles.active: develop
